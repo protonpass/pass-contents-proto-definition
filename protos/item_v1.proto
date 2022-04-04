@@ -6,7 +6,7 @@ message ItemNote {
     string content = 1;
 }
 
-message ItemCredential {
+message ItemLogin {
     string username = 1;
     string password = 2;
 }
@@ -15,6 +15,6 @@ message Item {
     string name = 1;
     oneof content {
         ItemNote note = 2;
-        ItemCredential credential = 3;
+        ItemLogin login = 3;
     }
 }
