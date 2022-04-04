@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proton_key_item_v1;
+
+message ItemNote {
+    string content = 1;
+}
+
+message ItemCredential {
+    string username = 1;
+    string password = 2;
+}
+
+message Item {
+    string name = 1;
+    oneof content {
+        ItemNote note = 2;
+        ItemCredential credential = 3;
+    }
+}
