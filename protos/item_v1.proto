@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proton_key_item_v1;
+package proton_pass_item_v1;
 
 message ItemNote {
     string content = 1;

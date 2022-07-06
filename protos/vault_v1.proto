@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package proton_key_vault_v1;
+package proton_pass_vault_v1;
 
 message Vault {
     string name = 1;
