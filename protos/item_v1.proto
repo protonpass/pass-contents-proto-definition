@@ -2,19 +2,32 @@ syntax = "proto3";
 
 package proton_pass_item_v1;
 
+// Item types
+
 message ItemNote {
-    string content = 1;
 }
 
 message ItemLogin {
-    string username = 1;
-    string password = 2;
+	string username = 1;
+	string password = 2;
+	repeated string urls = 3;
+}
+
+message ItemAlias {
+}
+
+// Item
+
+message Metadata {
+	string name = 1;
+	string note = 2;
 }
 
 message Item {
-    string name = 1;
-    oneof content {
-        ItemNote note = 2;
-        ItemLogin login = 3;
-    }
+	Metadata metadata = 1;
+	oneof content {
+		ItemNote note = 2;
+		ItemLogin login = 3;
+		ItemAlias alias = 4;
+	}
 }
