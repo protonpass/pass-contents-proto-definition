@@ -23,11 +23,15 @@ message Metadata {
 	string note = 2;
 }
 
-message Item {
-	Metadata metadata = 1;
+message Content {
 	oneof content {
 		ItemNote note = 2;
 		ItemLogin login = 3;
 		ItemAlias alias = 4;
 	}
+}
+
+message Item {
+	Metadata metadata = 1;
+	Content content = 2;
 }
