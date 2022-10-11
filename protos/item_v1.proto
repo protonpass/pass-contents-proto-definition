@@ -16,6 +16,20 @@ message ItemLogin {
 message ItemAlias {
 }
 
+// Client extras
+message AllowedAndroidApp {
+	string package_name = 1;
+	repeated string hashes = 2;
+}
+
+message AndroidSpecific {
+	repeated AllowedAndroidApp allowed_apps = 1;
+}
+
+message PlatformSpecific {
+	AndroidSpecific android = 1;
+}
+
 // Item
 
 message Metadata {
@@ -34,4 +48,5 @@ message Content {
 message Item {
 	Metadata metadata = 1;
 	Content content = 2;
+	PlatformSpecific platform_specific = 3;
 }
