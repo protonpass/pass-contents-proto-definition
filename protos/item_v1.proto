@@ -44,10 +44,6 @@ message ExtraField {
 	}
 }
 
-message ExtraFields {
-	repeated ExtraField fields = 1;
-}
-
 message Metadata {
 	string name = 1;
 	string note = 2;
@@ -66,5 +62,5 @@ message Item {
 	Metadata metadata = 1;
 	Content content = 2;
 	PlatformSpecific platform_specific = 3;
-	ExtraFields extra_fields = 4;
+	repeated ExtraField extra_fields = 4;
 }
