@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-package proton_pass_label_v1;
-
-message Label {
-	string name = 1;
-	string description = 2;
-}
