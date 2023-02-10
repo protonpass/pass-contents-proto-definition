@@ -21,6 +21,7 @@ message ItemAlias {
 message AllowedAndroidApp {
 	string package_name = 1;
 	repeated string hashes = 2;
+	string app_name = 3;
 }
 
 message AndroidSpecific {
