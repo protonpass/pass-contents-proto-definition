@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proton_pass_vault_v1;
 
-enum VAULT_ICON_ENUM {
+enum VaultIcon {
 	ICON_UNSPECIFIED = 0;
 	ICON_CUSTOM = 1;
 	ICON1 = 2;
@@ -15,7 +15,7 @@ enum VAULT_ICON_ENUM {
 	ICON8 = 9;
 };
 
-enum VAULT_COLOR_ENUM {
+enum VaultColor {
 	COLOR_UNSPECIFIED = 0;
 	COLOR_CUSTOM = 1;
 	COLOR1 = 2;
@@ -29,9 +29,9 @@ enum VAULT_COLOR_ENUM {
 };
 
 message VaultDisplayPreferences {
-	VAULT_ICON_ENUM icon = 1;
+	VaultIcon icon = 1;
 	string custom_icon = 2;
-	VAULT_COLOR_ENUM color = 3;
+	VaultColor color = 3;
 	string custom_color = 4;
 };
 
