@@ -15,6 +15,26 @@ enum VaultIcon {
 	ICON8 = 9;
 	ICON9 = 10;
 	ICON10 = 11;
+	ICON11 = 12;
+	ICON12 = 13;
+	ICON13 = 14;
+	ICON14 = 15;
+	ICON15 = 16;
+	ICON16 = 17;
+	ICON17 = 18;
+	ICON18 = 19;
+	ICON19 = 20;
+	ICON20 = 21;
+	ICON21 = 22;
+	ICON22 = 23;
+	ICON23 = 24;
+	ICON24 = 25;
+	ICON25 = 26;
+	ICON26 = 27;
+	ICON27 = 28;
+	ICON28 = 29;
+	ICON29 = 30;
+	ICON30 = 31;
 };
 
 enum VaultColor {
