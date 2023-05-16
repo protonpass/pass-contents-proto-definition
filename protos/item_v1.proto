@@ -38,10 +38,20 @@ message ExtraTotp {
 	string totp_uri = 1;
 }
 
+message ExtraTextField {
+	string content = 1;
+}
+
+message ExtraPasswordField {
+	string content = 1;
+}
+
 message ExtraField {
 	string field_name = 1;
 	oneof content {
 		ExtraTotp totp = 2;
+		ExtraTextField text = 3;
+		ExtraPasswordField password = 4;
 	}
 }
 
