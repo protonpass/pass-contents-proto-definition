@@ -42,7 +42,7 @@ message ExtraTextField {
 	string content = 1;
 }
 
-message ExtraPasswordField {
+message ExtraHiddenField {
 	string content = 1;
 }
 
@@ -51,7 +51,7 @@ message ExtraField {
 	oneof content {
 		ExtraTotp totp = 2;
 		ExtraTextField text = 3;
-		ExtraPasswordField password = 4;
+		ExtraHiddenField hidden = 4;
 	}
 }
 
