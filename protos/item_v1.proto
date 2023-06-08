@@ -17,8 +17,13 @@ message ItemLogin {
 message ItemAlias {
 }
 
-enum CardType {
-	Other = 0;
+// Credit cards
+message CustomCardType {
+	string name = 1;
+}
+
+enum KnownCardType {
+	Unspecified = 0;
 	Visa = 1;
 	Mastercard = 2;
 	AmericanExpress = 3;
@@ -30,6 +35,13 @@ enum CardType {
 	VisaElectron = 9;
 	Laser = 10;
 	UnionPay = 11;
+}
+
+message CardType {
+	oneof content {
+		CustomCardType custom = 1;
+		KnownCardType known = 2;
+	}	
 }
 
 message ItemCreditCard {
@@ -88,6 +100,7 @@ message Metadata {
 }
 
 message Content {
+	// No case 1 to avoid having a default
 	oneof content {
 		ItemNote note = 2;
 		ItemLogin login = 3;
