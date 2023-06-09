@@ -50,9 +50,8 @@ message ItemCreditCard {
 	string number = 3;
 	string cvv = 4;
 	string expiration_date = 5;
-	string valid_from = 6;
-	string issuer_bank = 7;
-	string pin = 8;
+	string issuer_bank = 6;
+	string pin = 7;
 }
 
 // Client extras
