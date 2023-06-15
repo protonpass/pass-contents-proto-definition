@@ -22,19 +22,12 @@ message CustomCardType {
 	string name = 1;
 }
 
-enum KnownCardType {
+enum CardType {
 	Unspecified = 0;
 	Other = 1;
 	Visa = 2;
 	Mastercard = 3;
 	AmericanExpress = 4;
-}
-
-message CardType {
-	oneof content {
-		CustomCardType custom = 1;
-		KnownCardType known = 2;
-	}	
 }
 
 message ItemCreditCard {
