@@ -18,10 +18,6 @@ message ItemAlias {
 }
 
 // Credit cards
-message CustomCardType {
-	string name = 1;
-}
-
 enum CardType {
 	Unspecified = 0;
 	Other = 1;
