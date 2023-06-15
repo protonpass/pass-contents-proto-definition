@@ -28,7 +28,6 @@ enum KnownCardType {
 	Visa = 2;
 	Mastercard = 3;
 	AmericanExpress = 4;
-	DinersClub = 5;
 }
 
 message CardType {
