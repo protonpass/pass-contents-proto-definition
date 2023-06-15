@@ -24,17 +24,10 @@ message CustomCardType {
 
 enum KnownCardType {
 	Unspecified = 0;
-	Visa = 1;
-	Mastercard = 2;
-	AmericanExpress = 3;
-	DinersClub = 4;
-	CarteBlanche = 5;
-	Discover = 6;
-	JCB = 7;
-	Maestro = 8;
-	VisaElectron = 9;
-	Laser = 10;
-	UnionPay = 11;
+	Other = 1;
+	Visa = 2;
+	Mastercard = 3;
+	AmericanExpress = 4;
 }
 
 message CardType {
