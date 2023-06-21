@@ -30,11 +30,10 @@ message ItemCreditCard {
 	string cardholder_name = 1;
 	CardType card_type = 2;
 	string number = 3;
-	string cvv = 4;
+	string verification_number = 4;
 	// Expected format: YYYY-MM, always containing two numbers for the month, even if is 01
 	string expiration_date = 5;
-	string issuer_bank = 6;
-	string pin = 7;
+	string pin = 6;
 }
 
 // Client extras
