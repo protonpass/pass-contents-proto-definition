@@ -8,7 +8,7 @@ message ItemNote {
 }
 
 message PasskeyCreationData {
-    string os_name = 1;
+	string os_name = 1;
 	string os_version = 2;
 	string device_name = 3;
 	string app_version = 4;
