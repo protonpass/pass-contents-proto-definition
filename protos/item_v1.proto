@@ -65,44 +65,44 @@ message ItemIdentity {
 
 	// Personal details
 	string full_name = 1;
-	string email = 2;
-	string phone_number = 3;
-	repeated ExtraIdentityField extra_personal_details = 4;
+	string first_name = 2;
+	string middle_name = 3;
+	string last_name = 4;
+	string birthdate = 5;
+	string gender = 6;
+	string email = 7;
+	string phone_number = 8;
+	repeated ExtraField extra_personal_details = 9;
 
 	// Address details
-	string organization = 5;
-	string street_address = 6;
-	string zip_or_postal_code = 7;
-	string city = 8;
-	string state_or_province = 9;
-	string country_or_region = 10;
-	repeated ExtraIdentityField extra_address_details = 11;
+	string organization = 10;
+	string street_address = 11;
+	string zip_or_postal_code = 12;
+	string city = 13;
+	string state_or_province = 14;
+	string country_or_region = 15;
+	repeated ExtraField extra_address_details = 16;
 
 	// Contact details
-	string social_security_number = 12;
-	string passport_number = 13;
-	string license_number = 14;
-	string website = 15;
-	string x_handle = 16;
-	repeated ExtraIdentityField extra_contact_details = 17;
+	string social_security_number = 17;
+	string passport_number = 18;
+	string license_number = 19;
+	string website = 20;
+	string x_handle = 21;
+	repeated ExtraField extra_contact_details = 22;
 
 	// Work details
-	string company = 18;
-	string job_title = 19;
-	repeated ExtraIdentityField extra_work_details = 20;
+	string company = 23;
+	string job_title = 24;
+	repeated ExtraField extra_work_details = 25;
 
 	// Extra sections
-	repeated ExtraIdentitySection extra_sections = 21;
-}
-
-message ExtraIdentityField {
-	string field_name = 1;
-	string field_value = 2;
+	repeated ExtraIdentitySection extra_sections = 26;
 }
 
 message ExtraIdentitySection {
 	string section_name = 1;
-	repeated ExtraIdentityField section_fields = 2;
+	repeated ExtraField section_fields = 2;
 }
 
 // Client extras
