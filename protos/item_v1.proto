@@ -64,40 +64,59 @@ message ItemCreditCard {
 message ItemIdentity {
 
 	// Personal details
+	// Shown
 	string full_name = 1;
-	string first_name = 2;
-	string middle_name = 3;
-	string last_name = 4;
-	string birthdate = 5;
-	string gender = 6;
-	string email = 7;
-	string phone_number = 8;
+	string email = 2;
+	string phone_number = 3;
+	// Additional
+	string first_name = 4;
+	string middle_name = 5;
+	string last_name = 6;
+	string birthdate = 7;
+	string gender = 8;
 	repeated ExtraField extra_personal_details = 9;
 
 	// Address details
+	// Shown
 	string organization = 10;
 	string street_address = 11;
 	string zip_or_postal_code = 12;
 	string city = 13;
 	string state_or_province = 14;
 	string country_or_region = 15;
-	repeated ExtraField extra_address_details = 16;
+	// Additional
+	string floor = 16;
+	string county = 17;
+	repeated ExtraField extra_address_details = 18;
 
 	// Contact details
-	string social_security_number = 17;
-	string passport_number = 18;
-	string license_number = 19;
-	string website = 20;
-	string x_handle = 21;
-	repeated ExtraField extra_contact_details = 22;
+	// Shown
+	string social_security_number = 19;
+	string passport_number = 20;
+	string license_number = 21;
+	string website = 22;
+	string x_handle = 23;
+	string second_phone_number = 24;
+	// Additional
+	string linkedin = 25;
+	string reddit = 26;
+	string facebook = 27;
+	string yahoo = 28;
+	string instagram = 29;
+	repeated ExtraField extra_contact_details = 30;
 
 	// Work details
-	string company = 23;
-	string job_title = 24;
-	repeated ExtraField extra_work_details = 25;
+	// Shown
+	string company = 31;
+	string job_title = 32;
+	// Additional
+	string personal_website = 33;
+	string work_phone_number = 34;
+	string work_email = 35;
+	repeated ExtraField extra_work_details = 36;
 
 	// Extra sections
-	repeated ExtraIdentitySection extra_sections = 26;
+	repeated ExtraIdentitySection extra_sections = 37;
 }
 
 message ExtraIdentitySection {
