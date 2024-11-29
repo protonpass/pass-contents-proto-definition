@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-message AttachmentMetadata {
+message FileMetadata {
 	// File name
 	string name = 1;
 	// MIME-Type (lowercase)
 	string mime_type = 2;
 }
 
-message Attachment {
-	AttachmentMetadata metadata = 1;
+message File {
+	FileMetadata metadata = 1;
 }
