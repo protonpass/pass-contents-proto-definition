@@ -1,0 +1,4 @@
+# ownership: loose
+*	@pass 
+/protos/	@pass 
+/tools/	@pass 
