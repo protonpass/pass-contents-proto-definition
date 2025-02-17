@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package proton_pass_item_v1;
 
+import "google/protobuf/timestamp.proto";
+
 // Item types
 
 message ItemNote {
@@ -153,12 +155,17 @@ message ExtraHiddenField {
 	string content = 1;
 }
 
+message ExtraTimestampField {
+	google.protobuf.Timestamp timestamp = 1;
+}
+
 message ExtraField {
 	string field_name = 1;
 	oneof content {
 		ExtraTotp totp = 2;
 		ExtraTextField text = 3;
 		ExtraHiddenField hidden = 4;
+		ExtraTimestampField timestamp = 5;
 	}
 }
 
