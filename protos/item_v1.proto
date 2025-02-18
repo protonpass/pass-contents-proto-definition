@@ -53,6 +53,18 @@ message ItemCustom {
 	repeated CustomSection sections = 1;
 }
 
+message ItemSSHKey {
+	string private_key = 1;
+	string public_key = 2;
+	repeated CustomSection sections = 3;
+}
+
+message ItemWifi {
+	string ssid = 1;
+	string password = 2;
+	repeated CustomSection sections = 3;
+}
+
 // Credit cards
 enum CardType {
 	Unspecified = 0;
@@ -192,7 +204,9 @@ message Content {
 		ItemAlias alias = 4;
 		ItemCreditCard credit_card = 5;
 		ItemIdentity identity = 6;
-		ItemCustom custom = 7;
+		ItemSSHKey ssh_key = 7;
+		ItemWifi wifi = 8;
+		ItemCustom custom = 9;
 	}
 }
 
