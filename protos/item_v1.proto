@@ -139,12 +139,7 @@ message ItemIdentity {
 	repeated ExtraField extra_work_details = 36;
 
 	// Extra sections
-	repeated ExtraIdentitySection extra_sections = 37;
-}
-
-message ExtraIdentitySection {
-	string section_name = 1;
-	repeated ExtraField section_fields = 2;
+	repeated CustomSection extra_sections = 37;
 }
 
 // Client extras
