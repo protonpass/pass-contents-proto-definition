@@ -62,7 +62,16 @@ message ItemSSHKey {
 message ItemWifi {
 	string ssid = 1;
 	string password = 2;
-	repeated CustomSection sections = 3;
+	WifiSecurity security = 3;
+	repeated CustomSection sections = 4;
+}
+
+enum WifiSecurity {
+	Unspecified = 0;
+	WPA = 1;
+	WPA2 = 2;
+	WPA3 = 3;
+	WEP = 4;
 }
 
 // Credit cards
