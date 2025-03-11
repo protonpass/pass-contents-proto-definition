@@ -67,7 +67,7 @@ message ItemWifi {
 }
 
 enum WifiSecurity {
-	Unspecified = 0;
+	UnspecifiedWifiSecurity = 0;
 	WPA = 1;
 	WPA2 = 2;
 	WPA3 = 3;
