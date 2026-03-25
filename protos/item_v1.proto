@@ -32,20 +32,18 @@ message Passkey {
 	PasskeyCreationData creation_data = 13;
 }
 
-
-enum AutofillMode {
-	Default = 0;
-	Exact = 1;
-	Never = 2;
-	StartWith = 3;
-	Pattern = 4;
-	RegularExpression = 5;
-	ExactPath = 6;
-}
-
 message AutofillUrl {
+	enum Mode {
+		Default = 0;
+		Exact = 1;
+		Never = 2;
+		StartWith = 3;
+		Pattern = 4;
+		RegularExpression = 5;
+		ExactPath = 6;
+	}
 	string url = 1;
-	AutofillMode mode = 2;
+	Mode mode = 2;
 }
 
 message ItemLogin {
